@@ -18,4 +18,4 @@ def load_whale_dataset():
     """Loads the (fake) clean whale dataset.
     Returns: A pandas DataFrame containing the whale dataset,
     """
-    return pd.read_csv('./data/fake_whale_dataset_clean.csv', index_col=0)
+    return pd.read_csv(DATA_PATH / 'fake_whale_dataset_clean.csv', index_col=0)
