@@ -6,11 +6,10 @@ EXERCISE 1: PART 1
 ------------------------
 
 The code below loads the dataset of temperatures in the town of 'Fishguard'.
-This dataset contains average temperatures for each month.
+This dataset contains average temperatures for each month in a year.
 You will now use pandas to extract some information about the dataset.
 
-    * Examine the size and shape of the dataset.
-        Do you notice something odd?
+    * Examine the size and shape of the dataset, you might notice something odd.
     * Print the dataset and familiarize yourself with it.
     * Extract the temperatures for June and July.
     * Use the method `idxmax` (index-max) on the Series to find the month (index)
@@ -18,7 +17,7 @@ You will now use pandas to extract some information about the dataset.
     * Can you fix the problem by removing a label from the dataset?
         Once you've fixed the problem, make sure that idxmax gives the correct answer.
 
-    * Uncomment the print statements (they also makes sure the shape of your Series is correct).
+    * Uncomment the print statements.
 """
 
 fishguard_temps = load_fishguard_dataset()
@@ -37,7 +36,7 @@ highest_temp_month = ...
 # print()
 
 """
-EXERCISE 1: PART 2
+[Optional] EXERCISE 1: PART 2
 ------------------------
     * Find the names of the three months with the highest temperatures.
         To do so, you can first sort the Series and then take the first three
