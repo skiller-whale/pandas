@@ -30,20 +30,27 @@ whale_df = load_whale_dataset()
 # YOUR CODE GOES HERE
 
 # * Select the age and whale_type of the first 100 whales.
-age_whale_type_first_100 = ...
+age_whale_type_first_100 = whale_df.loc[
+    0:99, ['age', 'whale_type']
+]
 
 # * Select the weight of whale number 567
-whale_567_weight = ...
+whale_567_weight = whale_df.loc[
+    567, 'weight'
+]
 
 # * Select all columns, EXCEPT the gender of the LAST 200 whales
-last_200_whales_except_gender = ...
+last_200_whales_except_gender = whale_df.loc[
+    whale_df.shape[0] - 200:,
+    'size': 'gender'
+]
 
 # * Select the size of all whales in the dataset.
-whale_sizes = ...
-largest_whale_index = ...
+whale_sizes = whale_df.loc[:, 'size']
+largest_whale_index = whale_sizes.idxmax()
 
 # # <<< DO NOT CHANGE THE LINES BELOW HERE (except to uncomment) >>>
-# assert age_whale_type_first_100.shape == (100, 2), "Shape of age_whale_type_first_100 is wrong!"
-# assert np.isclose(whale_567_weight, 6.641571451865368, rtol=1e-6), "Weight of whale 567 is wrong!"
-# assert last_200_whales_except_gender.shape == (200, 4), "Shape of last_200_whales_except_gender is wrong!"
-# assert largest_whale_index == 2045, "Wrong largest whale selected!"
+assert age_whale_type_first_100.shape == (100, 2), "Shape of age_whale_type_first_100 is wrong!"
+assert np.isclose(whale_567_weight, 6.641571451865368, rtol=1e-6), "Weight of whale 567 is wrong!"
+assert last_200_whales_except_gender.shape == (200, 4), "Shape of last_200_whales_except_gender is wrong!"
+assert largest_whale_index == 2045, "Wrong largest whale selected!"
