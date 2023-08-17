@@ -1,15 +1,12 @@
 version: '3.8'
-volumes:
-  exercises_upload:
 services:
   notebook:
     extends:
       file: common.yml
       service: notebook
     ports:
-      # 8888 is used by jupyter notebooks, 8812 is unlikely to be in use
-      # 127.0.0.1 makes the host mapping only accesible form localhost.
-      - "127.0.0.1:8812:8888"
+      # 8888 is used by jupyter notebooks
+      - "8888:8888"
   jupyter_converter:
     extends:
       file: common.yml
