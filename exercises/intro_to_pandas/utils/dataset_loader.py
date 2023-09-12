@@ -1,8 +1,8 @@
 import pandas as pd
 from pathlib import Path
 
-DATA_PATH = Path(__file__).parent.parent / 'data'
-FAKE_WHALE_DATASET_PATH = DATA_PATH / 'fake_whale_dataset_clean.csv'
+DATA_PATH = Path(__file__).parent.parent.parent / 'data'
+MOVIES_DATASET_PATH = DATA_PATH / 'movies' / 'movies_small.csv'
 
 def load_fishguard_dataset():
     """Loads the Fishguard temperatures dataset.
