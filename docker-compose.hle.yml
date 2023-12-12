@@ -8,7 +8,7 @@ services:
       service: notebook
     ports:
       # 8888 is used by jupyter notebooks
-      - "8888:8888"
+      - "8812:8888"
   jupyter_converter:
     extends:
       file: common.yml
